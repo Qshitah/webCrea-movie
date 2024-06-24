@@ -3,26 +3,26 @@
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg p-0">
                         <div class="collapse navbar-collapse" id="mynavbar">
-                            <a href="index.html" class="navbar-brand m-0 p-0"><img alt src="{{asset('/media/logo.png')}}"></a>
+                            <a href="{{url('/')}}" class="navbar-brand m-0 p-0"><img alt src="{{asset('/media/logo.png')}}"></a>
                             <ul class="navbar-nav m-0">
-                                <li class="menu-item"><a href="./index.html" class="active">Home</a></li>
+                                <li class="menu-item"><a href="./{{url('/')}}" class="active">Home</a></li>
                                 <li class="menu-item"><a href="./anime-listing.html" >Listing</a></li>
                                 <li class="has-children">
                                     <a href="javascript:void(0);">Detail</a>
                                     <ul class="submenu">
-                                        <li><a href="anime-detail.html">Anime Detail</a></li>
+                                        <li><a href="{{url('/anime-detail')}}">Anime Detail</a></li>
                                         <li><a href="movie-detail.html">Movie Detail</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-children">
                                     <a href="javascript:void(0);">Pages</a>
                                     <ul class="submenu">
-                                        <li><a href="./blog.html">Blog</a></li>
-                                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="sign-up.html">Sign up</a></li>
+                                        <li><a href="{{url('/blog')}}">Blog</a></li>
+                                        <li><a href="{{url('/blog-detail')}}">Blog Detail</a></li>
+                                        <li><a href="{{url('/login')}}">Login</a></li>
+                                        <li><a href="{{url('/signup')}}">Sign up</a></li>
                                         <li><a href="./404.html">404</a></li>
-                                        <li><a href="./coming-soon.html">Coming Soon</a></li>
+                                        <li><a href="{{url('/coming-soon')}}">Coming Soon</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -49,8 +49,8 @@
                                     <li class="has-children">
                                         <a href="javascript:void(0);"><img src="{{asset('/media/author/profile.png')}}" alt=""></a>
                                         <ul class="submenu">
-                                            <li><a href="sign-up.html">Sign up</a></li>
-                                            <li><a href="login.html">Login</a></li>
+                                            <li><a href="{{url('/signup')}}">Sign up</a></li>
+                                            <li><a href="{{url('/login')}}">Login</a></li>
                                         </ul>
                                     </li>
                                 </ul>

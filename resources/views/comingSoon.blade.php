@@ -23,17 +23,31 @@
 
     @include('partials.preloader')
     @include('partials.backToTop')
-    
+
     <div id="main-wrapper" class="main-wrapper overflow-hidden">
 
-        @include('partials.largeHeader')
-        @include('partials.smallHeader')
+        <div class="page-content">
+            <!-- Coming Soon Area Start -->
+            <section class="coming-soon-page text-center">
+                <div class="container-fluid">
+                    <div class="content">
+                        <img src="/media/logo.png" alt="" class="mb-32 logo">
+                        <h4 class="h-27 sec color-white mb-32">We are under construction</h4>
+                        <img src="/media/coming-soon!.png" alt="" class="mb-32">
+                        <ul class="timer countdown mb-0 data-timer2">
+                            <li>365<span>Days</span></li>
+                            <li>24<span>Hrs</span></li>
+                            <li>60<span>Min</span></li>
+                            <li class="m-0">60<span>Sec</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Coming Soon Area end -->
+        </div>
 
-        @yield('content')
     </div>
 
-    @include('partials.footer')
-    @include('partials.popup')
 
 
     <!-- Example in a Blade view file -->

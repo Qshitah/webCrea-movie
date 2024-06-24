@@ -19,7 +19,7 @@
                                 <i class="far fa-play"></i>
                                 Play
                             </a>
-                            <a href="./anime-detail.html" class="cus-btn sec">
+                            <a href="./{{url('/anime-detail')}}" class="cus-btn sec">
                                 <i class="fal fa-info-circle"></i>
                                 More info
                             </a>

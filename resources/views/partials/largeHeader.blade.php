@@ -5,12 +5,12 @@
                         <div class="collapse navbar-collapse" id="mynavbar">
                             <a href="{{url('/')}}" class="navbar-brand m-0 p-0"><img alt src="{{asset('/media/logo.png')}}"></a>
                             <ul class="navbar-nav m-0">
-                                <li class="menu-item"><a href="./{{url('/')}}" class="active">Home</a></li>
+                                <li class="menu-item"><a href="./index.html" class="active">Home</a></li>
                                 <li class="menu-item"><a href="./anime-listing.html" >Listing</a></li>
                                 <li class="has-children">
                                     <a href="javascript:void(0);">Detail</a>
                                     <ul class="submenu">
-                                        <li><a href="{{url('/anime-detail')}}">Anime Detail</a></li>
+                                        <li><a href="anime-detail.html">Anime Detail</a></li>
                                         <li><a href="movie-detail.html">Movie Detail</a></li>
                                     </ul>
                                 </li>
@@ -28,7 +28,7 @@
                             </ul>
                             <div class="right-nav">
                                 <div class="search-block">
-                                    <form action="anime-listing.html" class="input-group search-bar">
+                                    <form action="{{url('/listing')}}" class="input-group search-bar">
                                         <button class="search" type="submit"><i class="far fa-search search-icon"></i></button>
                                         <input type="text"    placeholder="Search..." required>
                                     </form>

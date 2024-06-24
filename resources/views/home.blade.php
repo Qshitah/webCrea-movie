@@ -10,7 +10,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="{{asset('/media/categories/Img-1.png')}}" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Shonen</h2>
@@ -19,7 +19,7 @@
                         </a>
                     </div>
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="{{asset('/media/categories/Img-2.png')}}" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Action</h2>
@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="{{asset('/media/categories/Img-3.png')}}" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Fantasy</h2>
@@ -37,7 +37,7 @@
                         </a>
                     </div>
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="/media/categories/Img-4.png" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Romantic</h2>
@@ -46,7 +46,7 @@
                         </a>
                     </div>
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="/media/categories/Img-5.png" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Comedy</h2>
@@ -55,7 +55,7 @@
                         </a>
                     </div>
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="/media/categories/Img-6.png" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Drama</h2>
@@ -64,7 +64,7 @@
                         </a>
                     </div>
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="/media/categories/Img-7.png" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Sci-Fi</h2>
@@ -73,7 +73,7 @@
                         </a>
                     </div>
                     <div class="col-xxl-3 col-sm-6 mb-30">
-                        <a href="./anime-listing.html" class="categorie-item">
+                        <a href="{{url('/listing')}}" class="categorie-item">
                             <img src="/media/categories/Img-8.png" alt="">
                             <div class="content">
                                 <h2 class="h-36 mb-1 color-white">Adventure</h2>
@@ -91,14 +91,14 @@
             <div class="container-fluid">
                 <div class="heading mb-32">
                     <h2 class="h-40 bold">Trending Shows</h2>
-                    <a href="./anime-listing.html" class="light-btn primary">View All <i class="far fa-chevron-right"></i></a>
+                    <a href="{{url('/listing')}}" class="light-btn primary">View All <i class="far fa-chevron-right"></i></a>
                 </div>
                 <div class="row">
                     <div class="col-xxl-3 col-xl-4 col-sm-6 mb-30 mb-xl-0">
                         <div class="card">
                             <div class="img-block mb-30">
                                 <img src="{{asset('/media/anime-card/img-3.png')}}" alt="">
-                                <a href="./movie-detail.html" class="cus-btn light">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                     Stream Now
                                     <i class="far fa-play"></i>
                                 </a>
@@ -116,7 +116,7 @@
                         <div class="card">
                             <div class="img-block mb-30">
                                 <img src="{{asset('/media/anime-card/img-4.png')}}" alt="">
-                                <a href="./movie-detail.html" class="cus-btn light">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                     Stream Now
                                     <i class="far fa-play"></i>
                                 </a>
@@ -134,7 +134,7 @@
                         <div class="card">
                             <div class="img-block mb-30">
                                 <img src="{{asset('/media/anime-card/img-5.png')}}" alt="">
-                                <a href="./movie-detail.html" class="cus-btn light">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                     Stream Now
                                     <i class="far fa-play"></i>
                                 </a>
@@ -152,7 +152,7 @@
                         <div class="card">
                             <div class="img-block mb-30">
                                 <img src="{{asset('/media/anime-card/img-6.png')}}" alt="">
-                                <a href="./movie-detail.html" class="cus-btn light">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                     Stream Now
                                     <i class="far fa-play"></i>
                                 </a>
@@ -176,7 +176,7 @@
             <div class="container-fluid">
                 <div class="heading mb-32">
                     <h2 class="h-40 bold">Continue Watching</h2>
-                    <a href="./anime-listing.html" class="light-btn primary">View All <i class="far fa-chevron-right"></i></a>
+                    <a href="{{url('/listing')}}" class="light-btn primary">View All <i class="far fa-chevron-right"></i></a>
                 </div>
                 <div class="row">
                     <div class="col-xxl-4 col-lg-6">
@@ -203,7 +203,7 @@
                                     </li>
                                 </ul>
                                 <div class="btn-block">
-                                    <a href="./movie-detail.html" class="cus-btn primary space">
+                                    <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                         <i class="far fa-play"></i>
                                         Play
                                     </a>
@@ -241,7 +241,7 @@
                                     </li>
                                 </ul>
                                 <div class="btn-block">
-                                    <a href="./movie-detail.html" class="cus-btn primary space">
+                                    <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                         <i class="far fa-play"></i>
                                         Play
                                     </a>
@@ -279,7 +279,7 @@
                                     </li>
                                 </ul>
                                 <div class="btn-block">
-                                    <a href="./movie-detail.html" class="cus-btn primary space">
+                                    <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                         <i class="far fa-play"></i>
                                         Play
                                     </a>
@@ -317,7 +317,7 @@
                                     </li>
                                 </ul>
                                 <div class="btn-block">
-                                    <a href="./movie-detail.html" class="cus-btn primary space">
+                                    <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                         <i class="far fa-play"></i>
                                         Play
                                     </a>
@@ -355,7 +355,7 @@
                                     </li>
                                 </ul>
                                 <div class="btn-block">
-                                    <a href="./movie-detail.html" class="cus-btn primary space">
+                                    <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                         <i class="far fa-play"></i>
                                         Play
                                     </a>
@@ -393,7 +393,7 @@
                                     </li>
                                 </ul>
                                 <div class="btn-block">
-                                    <a href="./movie-detail.html" class="cus-btn primary space">
+                                    <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                         <i class="far fa-play"></i>
                                         Play
                                     </a>
@@ -420,7 +420,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-22.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -439,7 +439,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-3.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -458,7 +458,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-8.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -477,7 +477,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-9.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -496,7 +496,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-19.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -711,7 +711,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-9.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -730,7 +730,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-3.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -749,7 +749,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-18.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -768,7 +768,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-19.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -787,7 +787,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-8.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -817,7 +817,7 @@
                     <div class="card st-2 bold">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-10.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -836,7 +836,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-23.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -855,7 +855,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-24.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -874,7 +874,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-25.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>
@@ -893,7 +893,7 @@
                     <div class="card st-2">
                         <div class="img-block mb-20">
                             <img src="{{asset('/media/anime-card/img-12.png')}}" alt="">
-                            <a href="./movie-detail.html" class="cus-btn light">
+                            <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                 Stream Now
                                 <i class="far fa-play"></i>
                             </a>

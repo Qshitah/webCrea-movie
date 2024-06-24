@@ -10,11 +10,11 @@
         </div>
         <nav class="mobile-navar d-xl-none">
             <ul>
-                <li><a href="{{url('/')}}" class="active">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="anime-listing.html">Listing</a></li>
                 <li class="has-children">Detail <span class="icon-arrow"></span>
                     <ul class="children">
-                        <li><a href="{{url('/anime-detail')}}">Anime Detail</a></li>
+                        <li><a href="anime-detail.html">Anime Detail</a></li>
                         <li><a href="movie-detail.html">Movie Detail</a></li>
                     </ul>
                 </li>

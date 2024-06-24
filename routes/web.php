@@ -43,3 +43,12 @@ Route::get('/blog', function () {
 Route::get('/blog-detail', function () {
     return view('blogDetail');
 });
+
+Route::get('/movie-detail', function () {
+    return view('movieDetail');
+});
+
+
+Route::get('/listing', function () {
+    return view('listing');
+});

@@ -58,6 +58,6 @@
                 </div>
             </div>
         </div>
-        <p class="color-white text-center copyright">All rights reserved by Vivid ©2024.</p>
+        <p class="color-white text-center copyright">All rights reserved by WebCrea ©2024.</p>
     </div>
 </footer>

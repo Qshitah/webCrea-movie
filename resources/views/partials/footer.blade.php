@@ -35,7 +35,7 @@
                 <div class="list">
                     <h5 class="h-24 bold color-white mb-50">Services</h5>
                     <ul class="link unstyled">
-                        <li><a href="./movie-detail.html">Movies</a></li>
+                        <li><a href="{{url('/movie-detail')}}">Movies</a></li>
                         <li><a href="">Newsletter</a></li>
                         <li><a href="./blog.html">Blog</a></li>
                     </ul>

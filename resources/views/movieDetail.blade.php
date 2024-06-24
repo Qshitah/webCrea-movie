@@ -1,311 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('welcome')
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Striker HTML5 Template">
+@section('title', 'Home Page')
 
-        <title>Vivid Entertainment Streaming And Blog</title>
-
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon"
-            href="assets/media/favicon.png">
-
-        <!-- All CSS files -->
-        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
-        <link rel="stylesheet" href="assets/css/vendor/slick.css">
-        <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
-        <link rel="stylesheet" href="assets/css/vendor/aksVideoPlayer.css">
-        <link rel="stylesheet" href="assets/css/app.css">
-    </head>
-
-    <body>
-        <!-- Preloader-->
-        <div id="preloader" class="loader">
-            <div class="loader__container">
-                <div class="loader__film">
-                    <img class="loader__film-img" src="./assets/media/preloader/film.png" alt="">
-                    <img class="loader__film-img" src="./assets/media/preloader/film.png" alt="">
-                </div>
-                <img class="loader__camera" src="./assets/media/preloader/camera.png" alt="">
-            </div>
-        </div>
-        <!-- Back To Top Start -->
-        <a href="#main-wrapper" id="backto-top" class="back-to-top"><i
-                class="fas fa-angle-up"></i></a>
-        <!-- Main Wrapper Start -->
-        <div id="main-wrapper" class="main-wrapper overflow-hidden">
-
-            <!-- Header Area Start -->
-            <header class="large-screens">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg p-0">
-                        <div class="collapse navbar-collapse" id="mynavbar">
-                            <a href="index.html" class="navbar-brand m-0 p-0"><img alt src="./assets/media/logo.png"></a>
-                            <ul class="navbar-nav m-0">
-                                <li class="menu-item"><a href="./index.html">Home</a></li>
-                                <li class="menu-item"><a href="{{url('/listing')}}" >Listing</a></li>
-                                <li class="has-children">
-                                    <a href="javascript:void(0);" class="active">Detail</a>
-                                    <ul class="submenu">
-                                        <li><a href="anime-detail.html" class="active">Anime Detail</a></li>
-                                        <li><a href="{{url('/movie-detail')}}">Movie Detail</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="javascript:void(0);">Pages</a>
-                                    <ul class="submenu">
-                                        <li><a href="./blog.html">Blog</a></li>
-                                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="sign-up.html">Sign up</a></li>
-                                        <li><a href="./404.html">404</a></li>
-                                        <li><a href="./coming-soon.html">Coming Soon</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="right-nav">
-                                <div class="search-block">
-                                    <form action="{{url('/listing')}}" class="input-group search-bar">
-                                        <button class="search" type="submit"><i class="far fa-search search-icon"></i></button>
-                                        <input type="text"    placeholder="Search..." required>
-                                    </form>
-                                </div>
-                                <ul class="navbar-nav m-0">
-                                    <li class="menu-item">
-                                        <a href="javascript:void(0);" class="notification">
-                                            <div class="notification-number">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
-                                                    <path d="M19.2138 12.3217V10.0781C19.2138 6.80522 16.9448 4.0312 13.836 3.12516V2.10938C13.836 0.946266 12.8491 0 11.636 0C10.4229 0 9.43602 0.946266 9.43602 2.10938V3.12516C6.32718 4.0312 4.05826 6.80517 4.05826 10.0781V12.3217C4.05826 15.1966 2.91533 17.9227 0.840056 19.9977C0.636679 20.2011 0.579528 20.5011 0.694808 20.7602C0.810087 21.0194 1.07555 21.1875 1.36937 21.1875H8.04313C8.38378 22.7903 9.86531 24 11.636 24C13.4068 24 14.8882 22.7903 15.2289 21.1875H21.9026C22.1965 21.1875 22.4619 21.0194 22.5772 20.7602C22.6924 20.5011 22.6353 20.2011 22.432 19.9977C20.3567 17.9227 19.2138 15.1965 19.2138 12.3217ZM10.9027 2.10938C10.9027 1.72167 11.2317 1.40625 11.636 1.40625C12.0404 1.40625 12.3693 1.72167 12.3693 2.10938V2.84663C12.128 2.82431 11.8834 2.8125 11.636 2.8125C11.3886 2.8125 11.144 2.82431 10.9027 2.84663V2.10938ZM11.636 22.5938C10.68 22.5938 9.86487 22.0059 9.56215 21.1875H13.7099C13.4072 22.0059 12.592 22.5938 11.636 22.5938ZM2.94995 19.7812C4.62004 17.6348 5.52492 15.0371 5.52492 12.3217V10.0781C5.52492 6.84727 8.26635 4.21875 11.636 4.21875C15.0057 4.21875 17.7471 6.84727 17.7471 10.0781V12.3217C17.7471 15.0371 18.652 17.6348 20.3221 19.7812H2.94995Z" fill="#C6CBD2"/>
-                                                    <path d="M21.1693 10.0781C21.1693 10.4664 21.4977 10.7812 21.9026 10.7812C22.3076 10.7812 22.636 10.4664 22.636 10.0781C22.636 7.26094 21.4918 4.61236 19.4142 2.62031C19.1278 2.34577 18.6635 2.34572 18.3771 2.62031C18.0907 2.89491 18.0907 3.34008 18.3771 3.61467C20.1777 5.34113 21.1693 7.63655 21.1693 10.0781Z" fill="#C6CBD2"/>
-                                                    <path d="M1.36937 10.7812C1.77437 10.7812 2.10271 10.4664 2.10271 10.0781C2.10271 7.63659 3.09436 5.34117 4.89494 3.61472C5.18133 3.34012 5.18133 2.89495 4.89494 2.62036C4.6086 2.34577 4.14425 2.34577 3.85786 2.62036C1.78024 4.61241 0.636043 7.26094 0.636043 10.0781C0.636043 10.4664 0.96438 10.7812 1.36937 10.7812Z" fill="#C6CBD2"/>
-                                                </svg>
-                                                <span>1</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="has-children">
-                                        <a href="javascript:void(0);"><img src="./assets/media/author/profile.png" alt=""></a>
-                                        <ul class="submenu">
-                                            <li><a href="sign-up.html">Sign up</a></li>
-                                            <li><a href="login.html">Login</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div> 
-                        </div>
-                    </nav>
-                </div>
-            </header>
-            <header class="small-screen">
-                <div class="container-fluid">
-                    <div class="mobile-menu">
-                        <div>
-                            <a class="navbar-brand" href="index.html"><img alt
-                                    src="./assets/media/logo.png"></a>
-                        </div>
-                        <div class="hamburger-menu">
-                            <div class="bar"></div>
-                        </div>
-                    </div>
-                    <nav class="mobile-navar d-xl-none">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="{{url('/listing')}}">Listing</a></li>
-                            <li class="has-children">Detail <span class="icon-arrow"></span>
-                                <ul class="children">
-                                    <li><a href="anime-detail.html" class="active">Anime Detail</a></li>
-                                    <li><a href="{{url('/movie-detail')}}">Movie Detail</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-children">Pages <span class="icon-arrow"></span>
-                                <ul class="children">
-                                    <li><a href="./blog.html">Blog</a></li>
-                                    <li><a href="./blog-detail.html">Blog Detail</a></li>
-                                    <li><a href="./404.html">404</a></li>
-                                    <li><a href="./coming-soon.html">Coming Soon</a></li>
-                                    <li><a href="./sign-up.html">Sign Up</a></li>
-                                    <li><a href="./login.html">Login</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <!-- Header Area end -->
-
-            <!-- Hero Banner start -->
-            <div class="inner-banner p-40">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xxl-4 col-lg-5 mb-lg-0 mb-24">
-                            <div class="movie-listing">
-                                <div class="name-detail">
-                                    <div class="season-list mb-16">
-                                        <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#season1" aria-expanded="true" aria-controls="season1">
-                                             <span>
-                                                Season-1: Demon Slayer: Kimetsu no Yaiba Mugen Train Arc 
-                                             </span>
-                                             <i class="fa fa-chevron-down"></i>
-                                        </a>
-                                        <div id="season1" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body unstyled">
-                                                <li>
-                                                    <a href="./anime-detail.html">Season-1: Demon Slayer: Kimetsu no Yaiba Mugen Train Arc</a>
-                                                </li>
-                                                <li>
-                                                    <a href="./anime-detail.html">Season-2: Demon Slayer: Kimetsu no Yaiba Mugen Train Arc</a>
-                                                </li>
-                                                <li>
-                                                    <a href="./anime-detail.html">Season-3: Demon Slayer: Kimetsu no Yaiba Mugen Train Arc</a>
-                                                </li>
-                                                <li>
-                                                    <a href="./anime-detail.html">Season-4: Demon Slayer: Kimetsu no Yaiba Mugen Train Arc</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4 class="h-24 bold mb-16 color-medium-gray">Episodes - 11</h4>
-                                </div>
-                                <div class="episode-list">
-                                    <div class="list">
-                                        <div class="img-block">
-                                            <img src="./assets/media/anime-season/card-1.png" alt="">
-                                            <a href="./anime-detail.html" class="cus-btn light sm-light">Now Playing</a>
-                                        </div>
-                                        <div class="detail-list">
-                                            <h5 class="color-white">E1 - Flame Hashira Kyojuro Rengoku</h5>
-                                            <p><span>Genre:</span> Drama, Comedy</p>
-                                            <p><span>Language:</span> English, Chinese</p>
-                                            <div class="time-view">
-                                                <p><span>26m 19s</span></p>
-                                                <div class="views-block">
-                                                    <a href="#"><i class="fal fa-thumbs-up"></i> 19K</a>
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                                            <g clip-path="url(#clip0_1041_3563)">
-                                                            <path d="M13.7021 5.4789L13.7021 5.47889C12.4334 4.86014 11.1887 4.55469 10 4.55469C8.81138 4.55469 7.56663 4.86014 6.29798 5.47888C5.30078 5.96529 4.28726 6.64533 3.28724 7.50513L13.7021 5.4789ZM13.7021 5.4789C14.8423 6.03491 15.7282 6.65859 16.7128 7.50513C18.4075 8.96232 19.4508 10.4039 19.4838 10.4498L19.4839 10.4499M13.7021 5.4789L19.4839 10.4499M19.4839 10.4499C19.5055 10.4798 19.5054 10.5202 19.4839 10.5501L19.4837 10.5504M19.4839 10.4499L19.4837 10.5504M19.4837 10.5504C19.4509 10.5961 18.4075 12.0377 16.7128 13.4949C15.7128 14.3547 14.6993 15.0347 13.7021 15.5211C12.4334 16.1399 11.1887 16.4453 10 16.4453C8.81343 16.4453 7.57096 16.1409 6.30452 15.5243C6.17247 15.455 6.06115 15.3969 5.96576 15.3471L5.9429 15.3352C5.40436 15.0541 5.40264 15.0532 4.84824 14.6841C4.32661 14.3368 3.8049 13.94 3.28721 13.4949C1.59259 12.0377 0.549236 10.5961 0.516254 10.5503L0.516172 10.5501M19.4837 10.5504L0.516172 10.5501M0.516172 10.5501C0.494597 10.5202 0.494631 10.4798 0.516145 10.4499L0.516254 10.4497M0.516172 10.5501L0.516254 10.4497M0.516254 10.4497C0.549228 10.4039 1.59262 8.96234 3.28721 7.50515L0.516254 10.4497ZM0.935733 10.1875L0.685329 10.4999L0.935478 10.8126C1.35465 11.3365 2.23269 12.3645 3.41965 13.382C3.91324 13.8051 4.49726 14.2562 5.15037 14.6733L5.16076 14.6799L5.17146 14.6861L6.22619 15.2886L6.23769 15.2952L6.24952 15.3011C7.36691 15.8632 8.64487 16.2734 10 16.2734C12.2268 16.2734 14.258 15.1859 15.8249 13.9913C17.3993 12.791 18.5628 11.4383 19.0643 10.8125L19.3147 10.5001L19.0645 10.1875C18.6455 9.66375 17.7674 8.63562 16.5804 7.61804C16.0868 7.19494 15.5028 6.74379 14.8496 6.32668L14.8393 6.32005L14.8286 6.31394L13.7739 5.7114L13.7624 5.70483L13.7505 5.69888C12.6332 5.1368 11.3552 4.72656 10 4.72656C7.77329 4.72656 5.7421 5.81407 4.17519 7.00868C2.60077 8.20903 1.43727 9.56173 0.935733 10.1875ZM13.6303 10.4378C13.6303 12.4427 12.005 14.068 10 14.068C7.99511 14.068 6.36978 12.4427 6.36978 10.4378C6.36978 8.43282 7.99511 6.80749 10 6.80749C12.005 6.80749 13.6303 8.43282 13.6303 10.4378Z" stroke="#F8F8FF"/>
-                                                            </g>
-                                                            <defs>
-                                                            <clipPath id="clip0_1041_3563">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-                                                            </clipPath>
-                                                            </defs>
-                                                        </svg> 1K
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="list">
-                                        <div class="img-block">
-                                            <img src="./assets/media/anime-season/card-2.png" alt="">
-                                            <a href="./anime-detail.html" class="cus-btn light sm-light">Now Playing</a>
-                                        </div>
-                                        <div class="detail-list">
-                                            <h5 class="color-white">E2 - Flame Hashira Kyojuro Rengoku</h5>
-                                            <p><span>Genre:</span> Drama, Comedy</p>
-                                            <p><span>Language:</span> English, Chinese</p>
-                                            <div class="time-view">
-                                                <p><span>26m 19s</span></p>
-                                                <div class="views-block">
-                                                    <a href="#"><i class="fal fa-thumbs-up"></i> 19K</a>
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                                            <g clip-path="url(#clip0_1041_3564)">
-                                                            <path d="M13.7021 5.4789L13.7021 5.47889C12.4334 4.86014 11.1887 4.55469 10 4.55469C8.81138 4.55469 7.56663 4.86014 6.29798 5.47888C5.30078 5.96529 4.28726 6.64533 3.28724 7.50513L13.7021 5.4789ZM13.7021 5.4789C14.8423 6.03491 15.7282 6.65859 16.7128 7.50513C18.4075 8.96232 19.4508 10.4039 19.4838 10.4498L19.4839 10.4499M13.7021 5.4789L19.4839 10.4499M19.4839 10.4499C19.5055 10.4798 19.5054 10.5202 19.4839 10.5501L19.4837 10.5504M19.4839 10.4499L19.4837 10.5504M19.4837 10.5504C19.4509 10.5961 18.4075 12.0377 16.7128 13.4949C15.7128 14.3547 14.6993 15.0347 13.7021 15.5211C12.4334 16.1399 11.1887 16.4453 10 16.4453C8.81343 16.4453 7.57096 16.1409 6.30452 15.5243C6.17247 15.455 6.06115 15.3969 5.96576 15.3471L5.9429 15.3352C5.40436 15.0541 5.40264 15.0532 4.84824 14.6841C4.32661 14.3368 3.8049 13.94 3.28721 13.4949C1.59259 12.0377 0.549236 10.5961 0.516254 10.5503L0.516172 10.5501M19.4837 10.5504L0.516172 10.5501M0.516172 10.5501C0.494597 10.5202 0.494631 10.4798 0.516145 10.4499L0.516254 10.4497M0.516172 10.5501L0.516254 10.4497M0.516254 10.4497C0.549228 10.4039 1.59262 8.96234 3.28721 7.50515L0.516254 10.4497ZM0.935733 10.1875L0.685329 10.4999L0.935478 10.8126C1.35465 11.3365 2.23269 12.3645 3.41965 13.382C3.91324 13.8051 4.49726 14.2562 5.15037 14.6733L5.16076 14.6799L5.17146 14.6861L6.22619 15.2886L6.23769 15.2952L6.24952 15.3011C7.36691 15.8632 8.64487 16.2734 10 16.2734C12.2268 16.2734 14.258 15.1859 15.8249 13.9913C17.3993 12.791 18.5628 11.4383 19.0643 10.8125L19.3147 10.5001L19.0645 10.1875C18.6455 9.66375 17.7674 8.63562 16.5804 7.61804C16.0868 7.19494 15.5028 6.74379 14.8496 6.32668L14.8393 6.32005L14.8286 6.31394L13.7739 5.7114L13.7624 5.70483L13.7505 5.69888C12.6332 5.1368 11.3552 4.72656 10 4.72656C7.77329 4.72656 5.7421 5.81407 4.17519 7.00868C2.60077 8.20903 1.43727 9.56173 0.935733 10.1875ZM13.6303 10.4378C13.6303 12.4427 12.005 14.068 10 14.068C7.99511 14.068 6.36978 12.4427 6.36978 10.4378C6.36978 8.43282 7.99511 6.80749 10 6.80749C12.005 6.80749 13.6303 8.43282 13.6303 10.4378Z" stroke="#F8F8FF"/>
-                                                            </g>
-                                                            <defs>
-                                                            <clipPath id="clip0_1041_3564">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-                                                            </clipPath>
-                                                            </defs>
-                                                        </svg> 1K
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="list">
-                                        <div class="img-block">
-                                            <img src="./assets/media/anime-season/card-3.png" alt="">
-                                            <a href="./anime-detail.html" class="cus-btn light sm-light">Now Playing</a>
-                                        </div>
-                                        <div class="detail-list">
-                                            <h5 class="color-white">E3 - Flame Hashira Kyojuro Rengoku</h5>
-                                            <p><span>Genre:</span> Drama, Comedy</p>
-                                            <p><span>Language:</span> English, Chinese</p>
-                                            <div class="time-view">
-                                                <p><span>26m 19s</span></p>
-                                                <div class="views-block">
-                                                    <a href="#"><i class="fal fa-thumbs-up"></i> 19K</a>
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                                            <g clip-path="url(#clip0_1041_3565)">
-                                                            <path d="M13.7021 5.4789L13.7021 5.47889C12.4334 4.86014 11.1887 4.55469 10 4.55469C8.81138 4.55469 7.56663 4.86014 6.29798 5.47888C5.30078 5.96529 4.28726 6.64533 3.28724 7.50513L13.7021 5.4789ZM13.7021 5.4789C14.8423 6.03491 15.7282 6.65859 16.7128 7.50513C18.4075 8.96232 19.4508 10.4039 19.4838 10.4498L19.4839 10.4499M13.7021 5.4789L19.4839 10.4499M19.4839 10.4499C19.5055 10.4798 19.5054 10.5202 19.4839 10.5501L19.4837 10.5504M19.4839 10.4499L19.4837 10.5504M19.4837 10.5504C19.4509 10.5961 18.4075 12.0377 16.7128 13.4949C15.7128 14.3547 14.6993 15.0347 13.7021 15.5211C12.4334 16.1399 11.1887 16.4453 10 16.4453C8.81343 16.4453 7.57096 16.1409 6.30452 15.5243C6.17247 15.455 6.06115 15.3969 5.96576 15.3471L5.9429 15.3352C5.40436 15.0541 5.40264 15.0532 4.84824 14.6841C4.32661 14.3368 3.8049 13.94 3.28721 13.4949C1.59259 12.0377 0.549236 10.5961 0.516254 10.5503L0.516172 10.5501M19.4837 10.5504L0.516172 10.5501M0.516172 10.5501C0.494597 10.5202 0.494631 10.4798 0.516145 10.4499L0.516254 10.4497M0.516172 10.5501L0.516254 10.4497M0.516254 10.4497C0.549228 10.4039 1.59262 8.96234 3.28721 7.50515L0.516254 10.4497ZM0.935733 10.1875L0.685329 10.4999L0.935478 10.8126C1.35465 11.3365 2.23269 12.3645 3.41965 13.382C3.91324 13.8051 4.49726 14.2562 5.15037 14.6733L5.16076 14.6799L5.17146 14.6861L6.22619 15.2886L6.23769 15.2952L6.24952 15.3011C7.36691 15.8632 8.64487 16.2734 10 16.2734C12.2268 16.2734 14.258 15.1859 15.8249 13.9913C17.3993 12.791 18.5628 11.4383 19.0643 10.8125L19.3147 10.5001L19.0645 10.1875C18.6455 9.66375 17.7674 8.63562 16.5804 7.61804C16.0868 7.19494 15.5028 6.74379 14.8496 6.32668L14.8393 6.32005L14.8286 6.31394L13.7739 5.7114L13.7624 5.70483L13.7505 5.69888C12.6332 5.1368 11.3552 4.72656 10 4.72656C7.77329 4.72656 5.7421 5.81407 4.17519 7.00868C2.60077 8.20903 1.43727 9.56173 0.935733 10.1875ZM13.6303 10.4378C13.6303 12.4427 12.005 14.068 10 14.068C7.99511 14.068 6.36978 12.4427 6.36978 10.4378C6.36978 8.43282 7.99511 6.80749 10 6.80749C12.005 6.80749 13.6303 8.43282 13.6303 10.4378Z" stroke="#F8F8FF"/>
-                                                            </g>
-                                                            <defs>
-                                                            <clipPath id="clip0_1041_3565">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-                                                            </clipPath>
-                                                            </defs>
-                                                        </svg> 1K
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="list">
-                                        <div class="img-block">
-                                            <img src="./assets/media/anime-season/card-3.png" alt="">
-                                            <a href="./anime-detail.html" class="cus-btn light sm-light">Now Playing</a>
-                                        </div>
-                                        <div class="detail-list">
-                                            <h5 class="color-white">E4 - Flame Hashira Kyojuro Rengoku</h5>
-                                            <p><span>Genre:</span> Drama, Comedy</p>
-                                            <p><span>Language:</span> English, Chinese</p>
-                                            <div class="time-view">
-                                                <p><span>26m 19s</span></p>
-                                                <div class="views-block">
-                                                    <a href="#"><i class="fal fa-thumbs-up"></i> 19K</a>
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                                            <g clip-path="url(#clip0_1041_3566)">
-                                                            <path d="M13.7021 5.4789L13.7021 5.47889C12.4334 4.86014 11.1887 4.55469 10 4.55469C8.81138 4.55469 7.56663 4.86014 6.29798 5.47888C5.30078 5.96529 4.28726 6.64533 3.28724 7.50513L13.7021 5.4789ZM13.7021 5.4789C14.8423 6.03491 15.7282 6.65859 16.7128 7.50513C18.4075 8.96232 19.4508 10.4039 19.4838 10.4498L19.4839 10.4499M13.7021 5.4789L19.4839 10.4499M19.4839 10.4499C19.5055 10.4798 19.5054 10.5202 19.4839 10.5501L19.4837 10.5504M19.4839 10.4499L19.4837 10.5504M19.4837 10.5504C19.4509 10.5961 18.4075 12.0377 16.7128 13.4949C15.7128 14.3547 14.6993 15.0347 13.7021 15.5211C12.4334 16.1399 11.1887 16.4453 10 16.4453C8.81343 16.4453 7.57096 16.1409 6.30452 15.5243C6.17247 15.455 6.06115 15.3969 5.96576 15.3471L5.9429 15.3352C5.40436 15.0541 5.40264 15.0532 4.84824 14.6841C4.32661 14.3368 3.8049 13.94 3.28721 13.4949C1.59259 12.0377 0.549236 10.5961 0.516254 10.5503L0.516172 10.5501M19.4837 10.5504L0.516172 10.5501M0.516172 10.5501C0.494597 10.5202 0.494631 10.4798 0.516145 10.4499L0.516254 10.4497M0.516172 10.5501L0.516254 10.4497M0.516254 10.4497C0.549228 10.4039 1.59262 8.96234 3.28721 7.50515L0.516254 10.4497ZM0.935733 10.1875L0.685329 10.4999L0.935478 10.8126C1.35465 11.3365 2.23269 12.3645 3.41965 13.382C3.91324 13.8051 4.49726 14.2562 5.15037 14.6733L5.16076 14.6799L5.17146 14.6861L6.22619 15.2886L6.23769 15.2952L6.24952 15.3011C7.36691 15.8632 8.64487 16.2734 10 16.2734C12.2268 16.2734 14.258 15.1859 15.8249 13.9913C17.3993 12.791 18.5628 11.4383 19.0643 10.8125L19.3147 10.5001L19.0645 10.1875C18.6455 9.66375 17.7674 8.63562 16.5804 7.61804C16.0868 7.19494 15.5028 6.74379 14.8496 6.32668L14.8393 6.32005L14.8286 6.31394L13.7739 5.7114L13.7624 5.70483L13.7505 5.69888C12.6332 5.1368 11.3552 4.72656 10 4.72656C7.77329 4.72656 5.7421 5.81407 4.17519 7.00868C2.60077 8.20903 1.43727 9.56173 0.935733 10.1875ZM13.6303 10.4378C13.6303 12.4427 12.005 14.068 10 14.068C7.99511 14.068 6.36978 12.4427 6.36978 10.4378C6.36978 8.43282 7.99511 6.80749 10 6.80749C12.005 6.80749 13.6303 8.43282 13.6303 10.4378Z" stroke="#F8F8FF"/>
-                                                            </g>
-                                                            <defs>
-                                                            <clipPath id="clip0_1041_3566">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-                                                            </clipPath>
-                                                            </defs>
-                                                        </svg> 1K
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-8 col-lg-7 ">
-                            <div class="videoplayer">
-                                <div id="video" data-img="assets/media/banner/img-1.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main Content Start -->
-            <div class="page-content">
+@section('content')
+    @include('partials.movieBanner')
+<div class="page-content">
 
                 <!-- Movie Detail Area Start -->
                 <section class="movie-detail p-40">
@@ -379,7 +78,7 @@
                         <div class="card-slider ">
                             <div class="card st-2">
                                 <div class="img-block mb-20">
-                                    <img src="./assets/media/anime-card/img-22.png" alt="">
+                                    <img src="/media/anime-card/img-22.png" alt="">
                                     <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                         Stream Now
                                         <i class="far fa-play"></i>
@@ -398,7 +97,7 @@
                             </div>     
                             <div class="card st-2">
                                 <div class="img-block mb-20">
-                                    <img src="./assets/media/anime-card/img-3.png" alt="">
+                                    <img src="/media/anime-card/img-3.png" alt="">
                                     <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                         Stream Now
                                         <i class="far fa-play"></i>
@@ -417,7 +116,7 @@
                             </div>     
                             <div class="card st-2">
                                 <div class="img-block mb-20">
-                                    <img src="./assets/media/anime-card/img-8.png" alt="">
+                                    <img src="/media/anime-card/img-8.png" alt="">
                                     <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                         Stream Now
                                         <i class="far fa-play"></i>
@@ -436,7 +135,7 @@
                             </div>     
                             <div class="card st-2">
                                 <div class="img-block mb-20">
-                                    <img src="./assets/media/anime-card/img-9.png" alt="">
+                                    <img src="/media/anime-card/img-9.png" alt="">
                                     <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                         Stream Now
                                         <i class="far fa-play"></i>
@@ -455,7 +154,7 @@
                             </div>     
                             <div class="card st-2">
                                 <div class="img-block mb-20">
-                                    <img src="./assets/media/anime-card/img-19.png" alt="">
+                                    <img src="/media/anime-card/img-19.png" alt="">
                                     <a href="{{url('/movie-detail')}}" class="cus-btn light">
                                         Stream Now
                                         <i class="far fa-play"></i>
@@ -487,7 +186,7 @@
                         <div class="row">
                             <div class="col-xxl-4 col-lg-6">
                                 <div class="item mb-40">
-                                    <img src="./assets/media/anime-card/img-7.png" alt="">
+                                    <img src="/media/anime-card/img-7.png" alt="">
                                     <div class="content">
                                         <h4 class="h-24 color-white bold mb-12">Hell’s Paradise</h4>
                                         <ul class="tag unstyled">
@@ -525,7 +224,7 @@
                             </div>
                             <div class="col-xxl-4 col-lg-6">
                                 <div class="item mb-40">
-                                    <img src="./assets/media/anime-card/img-8.png" alt="">
+                                    <img src="/media/anime-card/img-8.png" alt="">
                                     <div class="content">
                                         <h4 class="h-24 color-white bold mb-12">Fate Stay Night        </h4>
                                         <ul class="tag unstyled">
@@ -563,7 +262,7 @@
                             </div>
                             <div class="col-xxl-4 col-lg-6">
                                 <div class="item mb-40">
-                                    <img src="./assets/media/anime-card/img-9.png" alt="">
+                                    <img src="/media/anime-card/img-9.png" alt="">
                                     <div class="content">
                                         <h4 class="h-24 color-white bold mb-12">Steins Gate</h4>
                                         <ul class="tag unstyled">
@@ -601,7 +300,7 @@
                             </div>
                             <div class="col-xxl-4 col-lg-6">
                                 <div class="item mb-40">
-                                    <img src="./assets/media/anime-card/img-10.png" alt="">
+                                    <img src="/media/anime-card/img-10.png" alt="">
                                     <div class="content">
                                         <h4 class="h-24 color-white bold mb-12">Black Bullet</h4>
                                         <ul class="tag unstyled">
@@ -639,7 +338,7 @@
                             </div>
                             <div class="col-xxl-4 col-lg-6">
                                 <div class="item mb-40">
-                                    <img src="./assets/media/anime-card/img-11.png" alt="">
+                                    <img src="/media/anime-card/img-11.png" alt="">
                                     <div class="content">
                                         <h4 class="h-24 color-white bold mb-12">Chainsawman</h4>
                                         <ul class="tag unstyled">
@@ -677,7 +376,7 @@
                             </div>
                             <div class="col-xxl-4 col-lg-6">
                                 <div class="item mb-40">
-                                    <img src="./assets/media/anime-card/img-12.png" alt="">
+                                    <img src="/media/anime-card/img-12.png" alt="">
                                     <div class="content">
                                         <h4 class="h-24 color-white bold mb-12">My Hero Academia</h4>
                                         <ul class="tag unstyled">
@@ -736,7 +435,7 @@
                                     </div>
                                 </div>
                                 <div class="comment-box  mb-32">
-                                    <img src="./assets/media/author/profile-1.png" alt="">
+                                    <img src="/media/author/profile-1.png" alt="">
                                     <div class="text-block">
                                         <div class="top-line mb-8">
                                             <h5 class="h-20 bold color-white">@otaku_obsessed</h5>
@@ -760,7 +459,7 @@
                                             </div>
                                             <div id="reply2" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                 <div class="write-comment-box">
-                                                    <form action="anime-detail.html">
+                                                    <form action="{{url('/movie-detail')}}">
                                                         <div class="input-group">
                                                             <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                             <button type="submit">Post</button>
@@ -774,7 +473,7 @@
                                         <div id="reply" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                             <div class="extra-comments">
                                                 <div class="comment-box  mb-32 sm">
-                                                    <img src="./assets/media/author/profile-3.png" alt="">
+                                                    <img src="/media/author/profile-3.png" alt="">
                                                     <div class="text-block">
                                                         <div class="top-line mb-8">
                                                             <h5 class="h-20 bold color-white">@otaku_obsessed</h5>
@@ -798,7 +497,7 @@
                                                             </div>
                                                             <div id="reply3" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                                 <div class="write-comment-box">
-                                                                    <form action="anime-detail.html">
+                                                                    <form action="{{url('/movie-detail')}}">
                                                                         <div class="input-group">
                                                                             <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                                             <button type="submit">Post</button>
@@ -811,7 +510,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="comment-box  mb-32 sm">
-                                                    <img src="./assets/media/author/profile-3.png" alt="">
+                                                    <img src="/media/author/profile-3.png" alt="">
                                                     <div class="text-block">
                                                         <div class="top-line mb-8">
                                                             <h5 class="h-20 bold color-white">@otaku_obsessed</h5>
@@ -835,7 +534,7 @@
                                                             </div>
                                                             <div id="reply4" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                                 <div class="write-comment-box">
-                                                                    <form action="anime-detail.html">
+                                                                    <form action="{{url('/movie-detail')}}">
                                                                         <div class="input-group">
                                                                             <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                                             <button type="submit">Post</button>
@@ -852,7 +551,7 @@
                                     </div>
                                 </div>
                                 <div class="comment-box  mb-32">
-                                    <img src="./assets/media/author/profile-2.png" alt="">
+                                    <img src="/media/author/profile-2.png" alt="">
                                     <div class="text-block">
                                         <div class="top-line mb-8">
                                             <h5 class="h-20 bold color-white">@kawaii_kat</h5>
@@ -876,7 +575,7 @@
                                             </div>
                                             <div id="reply5" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                 <div class="write-comment-box">
-                                                    <form action="anime-detail.html">
+                                                    <form action="{{url('/movie-detail')}}">
                                                         <div class="input-group">
                                                             <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                             <button type="submit">Post</button>
@@ -889,7 +588,7 @@
                                         <div id="reply6" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                             <div class="extra-comments">
                                                 <div class="comment-box  mb-32 sm">
-                                                    <img src="./assets/media/author/profile-3.png" alt="">
+                                                    <img src="/media/author/profile-3.png" alt="">
                                                     <div class="text-block">
                                                         <div class="top-line mb-8">
                                                             <h5 class="h-20 bold color-white">@otaku_obsessed</h5>
@@ -913,7 +612,7 @@
                                                             </div>
                                                             <div id="reply7" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                                 <div class="write-comment-box">
-                                                                    <form action="anime-detail.html">
+                                                                    <form action="{{url('/movie-detail')}}">
                                                                         <div class="input-group">
                                                                             <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                                             <button type="submit">Post</button>
@@ -926,7 +625,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="comment-box  mb-32 sm">
-                                                    <img src="./assets/media/author/profile-3.png" alt="">
+                                                    <img src="/media/author/profile-3.png" alt="">
                                                     <div class="text-block">
                                                         <div class="top-line mb-8">
                                                             <h5 class="h-20 bold color-white">@cosplayqueen</h5>
@@ -945,12 +644,12 @@
                                                                 </div>
                                                                 <div class="btn-block">
                                                                     <button class=" accordion-button collapsed comment-btn reply-btn" data-bs-toggle="collapse"
-                                                                     data-bs-target="#reply8" aria-expanded="true">Reply <i class="fal fa-reply"></i></button>
+                                                                     data-bs-target="#reply9" aria-expanded="true">Reply <i class="fal fa-reply"></i></button>
                                                                 </div>
                                                             </div>
-                                                            <div id="reply8" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
+                                                            <div id="reply9" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                                 <div class="write-comment-box">
-                                                                    <form action="anime-detail.html">
+                                                                    <form action="{{url('/movie-detail')}}">
                                                                         <div class="input-group">
                                                                             <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                                             <button type="submit">Post</button>
@@ -967,7 +666,7 @@
                                     </div>
                                 </div>
                                 <div class="comment-box  mb-32">
-                                    <img src="./assets/media/author/profile-2.png" alt="">
+                                    <img src="/media/author/profile-2.png" alt="">
                                     <div class="text-block">
                                         <div class="top-line mb-8">
                                             <h5 class="h-20 bold color-white">@kawaii_kat</h5>
@@ -986,10 +685,10 @@
                                                 </div>
                                                 <div class="btn-block">
                                                     <button class=" accordion-button collapsed comment-btn reply-btn" data-bs-toggle="collapse"
-                                                     data-bs-target="#reply9" aria-expanded="true">Reply <i class="fal fa-reply"></i></button>
+                                                     data-bs-target="#reply10" aria-expanded="true">Reply <i class="fal fa-reply"></i></button>
                                                 </div>
                                             </div>
-                                            <div id="reply9" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
+                                            <div id="reply10" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                 <div class="write-comment-box">
                                                     <form action="anime-detail.html">
                                                         <div class="input-group">
@@ -1004,14 +703,14 @@
                                 </div>
                                 <div class="more">
                                     <a href="#" class="accordion-button comment-btn collapsed  mb-0 action-btn" data-bs-toggle="collapse" 
-                                        data-bs-target="#reply20" aria-expanded="false" aria-controls="reply"> Load More Comments <i class="fa fa-chevron-down"></i>
+                                        data-bs-target="#reply12" aria-expanded="false" aria-controls="reply"> Load More Comments <i class="fa fa-chevron-down"></i>
                                     </a>
                                     <p class="color-medium-gray">40 of 1500</p>
                                 </div>
-                                <div id="reply20" class="accordion-collapse collapse mt-32" data-bs-parent="#accordionExample">
+                                <div id="reply12" class="accordion-collapse collapse mt-32" data-bs-parent="#accordionExample">
                                     <div class="extra-comments">
                                         <div class="comment-box  mb-32">
-                                            <img src="./assets/media/author/profile-1.png" alt="">
+                                            <img src="/media/author/profile-1.png" alt="">
                                             <div class="text-block">
                                                 <div class="top-line mb-8">
                                                     <h5 class="h-20 bold color-white">@kawaii_kat</h5>
@@ -1030,12 +729,12 @@
                                                         </div>
                                                         <div class="btn-block">
                                                             <button class=" accordion-button collapsed comment-btn reply-btn" data-bs-toggle="collapse"
-                                                             data-bs-target="#reply10" aria-expanded="true">Reply <i class="fal fa-reply"></i></button>
+                                                             data-bs-target="#reply15" aria-expanded="true">Reply <i class="fal fa-reply"></i></button>
                                                         </div>
                                                     </div>
-                                                    <div id="reply10" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
+                                                    <div id="reply15" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                         <div class="write-comment-box">
-                                                            <form action="anime-detail.html">
+                                                            <form action="{{url('/movie-detail')}}">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                                     <button type="submit">Post</button>
@@ -1047,7 +746,7 @@
                                             </div>
                                         </div>
                                         <div class="comment-box">
-                                            <img src="./assets/media/author/profile-2.png" alt="">
+                                            <img src="/media/author/profile-2.png" alt="">
                                             <div class="text-block">
                                                 <div class="top-line mb-8">
                                                     <h5 class="h-20 bold color-white">@kawaii_kat</h5>
@@ -1071,7 +770,7 @@
                                                     </div>
                                                     <div id="reply11" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                         <div class="write-comment-box">
-                                                            <form action="anime-detail.html">
+                                                            <form action="{{url('/movie-detail')}}">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                                     <button type="submit">Post</button>
@@ -1087,7 +786,7 @@
                             </div>
                             <div class="col-xl-4">
                                 <div class="trailer">
-                                    <img src="./assets/media/anime-card/img-26.png" alt="">
+                                    <img src="/media/anime-card/img-26.png" alt="">
                                     <div class="detail">
                                         <h4 class="h-20 bold color-primary mb-8">Coming Soon!</h4>
                                         <ul class="timer countdown unstyled data-timer1">
@@ -1107,7 +806,7 @@
                                 <div class="notification">
                                     <h4 class="h-36 bold color-white mb-8">Notifications</h4>
                                     <p class="sec color-medium-gray mb-32">Subscribe to our notifications so you get notified about new episodes!</p>
-                                    <form action="./anime-detail.html">
+                                    <form action="{{url('/movie-detail')}}">
                                         <input type="email" id="email" class="form-control mb-32" placeholder="Your email">
                                         <button type="submit" class="cus-btn primary">Subscribe</button>
                                     </form>
@@ -1117,7 +816,7 @@
                                 <div class="comment-block p-40 pb-0">
                                     <h4 class="h-36 bold color-white mb-8">Leave a Comment</h4>
                                     <p class="sec color-medium-gray mb-24">Your email will be kept private.</p>
-                                    <form action="./anime-detail.html">
+                                    <form action="{{url('/movie-detail')}}">
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <input type="text" id="name" class="form-control mb-16" placeholder="Your Name">
@@ -1149,107 +848,4 @@
                 <!-- Comment Area End -->
 
             </div>
-            <!-- Main Content End -->
-
-            <!-- Footer Area Start  -->
-            <footer>
-                <div class="container-fluid">
-                    <div class="footer-main">
-                        <div class="footer-info">
-                            <div class="footer-about">
-                                <div class="logo mb-40">
-                                    <a href="./index.html">
-                                        <img src="./assets/media/logo.png" alt="">
-                                    </a>
-                                </div>
-                                <p class="light-gray h-20 light mb-48">
-                                    Stay connected with us and lets know <br> more stories about new movies and <br> More Explorer Us for get it 
-                                </p>
-
-                                <ul class="unstyled social-icons">
-                                    <li>
-                                        <a href="index.html"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M17.624 5.625C18.0121 5.625 18.3271 5.31 18.3271 4.92188V0.703125C18.3271 0.315 18.0121 0 17.624 0H13.4053C10.6912 0 8.4834 2.20781 8.4834 4.92188V8.4375H6.37402C5.9859 8.4375 5.6709 8.7525 5.6709 9.14062V13.3594C5.6709 13.7475 5.9859 14.0625 6.37402 14.0625H8.4834V23.2969C8.4834 23.685 8.7984 24 9.18652 24H13.4053C13.7934 24 14.1084 23.685 14.1084 23.2969V14.0625H16.9209C17.2645 14.0625 17.5579 13.8141 17.6146 13.4752L18.3178 9.25641C18.3515 9.0525 18.2943 8.84391 18.1607 8.68594C18.0271 8.52844 17.8307 8.4375 17.624 8.4375H14.1084V5.625H17.624ZM13.4053 9.84375H16.7939L16.3251 12.6562H13.4053C13.0171 12.6562 12.7021 12.9713 12.7021 13.3594V22.5938H9.88965V13.3594C9.88965 12.9713 9.57465 12.6562 9.18652 12.6562H7.07715V9.84375H9.18652C9.57465 9.84375 9.88965 9.52875 9.88965 9.14062V4.92188C9.88965 2.98359 11.467 1.40625 13.4053 1.40625H16.9209V4.21875H13.4053C13.0171 4.21875 12.7021 4.53375 12.7021 4.92188V9.14062C12.7021 9.52875 13.0171 9.84375 13.4053 9.84375Z" fill="#7A7F85"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M13.866 10.3108L22.6084 0.148438H20.5368L12.9457 8.97227L6.88278 0.148438H-0.110107L9.05826 13.4916L-0.110107 24.1484H1.96169L9.97803 14.8302L16.3809 24.1484H23.3738L13.8655 10.3108H13.866ZM11.0284 13.6092L10.0995 12.2805L2.70818 1.70805H5.89033L11.8552 10.2404L12.7841 11.569L20.5378 22.6598H17.3556L11.0284 13.6097V13.6092Z" fill="#7A7F85"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="list">
-                                <h5 class="h-24 bold color-white mb-50">Services</h5>
-                                <ul class="link unstyled">
-                                    <li><a href="{{url('/movie-detail')}}">Movies</a></li>
-                                    <li><a href="">Newsletter</a></li>
-                                    <li><a href="./blog.html">Blog</a></li>
-                                </ul>
-                            </div>
-                            <div class="list">
-                                <h5 class="h-24 bold color-white mb-50">Information</h5>
-                                <ul class="link unstyled">
-                                    <li><a href="./sign-up.html">Sign up</a></li>
-                                    <li><a href="./login.html">Login</a></li>
-                                    <li>About Us</li>
-                                </ul>
-                            </div>
-                            <div class="list">
-                                <h5 class="h-24 bold color-white mb-50">Security</h5>
-                                <ul class="link unstyled">
-                                    <li>Terms and Condition</li>
-                                    <li>Privacy Policy</li>
-                                    <li>Contact us</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="color-white text-center copyright">All rights reserved by Vivid ©2024.</p>
-                </div>
-            </footer>
-            <!-- Footer Area End  -->
-
-            <!-- modal-popup area start  -->
-            <div class="modal fade" id="videoModal" role="dialog" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="top_bar">
-                            <h4 class="modal-title">Demon Slayer Season 4</h4>
-                            <button type="button" class="close" id="closeVideoModalButton" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"><i class="fas fa-times"></i> <b>Close</b></span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <video  controls title="Video">
-                                <source src="assets/media/video/movie-video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- modal-popup area end  -->
-
-        </div>
-
-        <!-- Jquery Js -->
-        <script src="assets/js/vendor/jquery-3.6.3.min.js"></script>
-        <script src="assets/js/vendor/jquery.countdown.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
-        <script src="assets/js/vendor/slick.min.js"></script>
-        <script src="assets/js/vendor/jquery-appear.js"></script>
-        <script src="assets/js/vendor/jquery-validator.js"></script>
-        <script src="assets/js/vendor/aksVideoPlayer.js"></script>
-
-        <!-- Site Scripts -->
-        <script src="assets/js/app.js"></script>
-    </body>
-
-</html>
+@endsection

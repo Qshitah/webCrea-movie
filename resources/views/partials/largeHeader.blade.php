@@ -6,12 +6,12 @@
                             <a href="{{url('/')}}" class="navbar-brand m-0 p-0"><img alt src="{{asset('/media/logo.png')}}"></a>
                             <ul class="navbar-nav m-0">
                                 <li class="menu-item"><a href="./index.html" class="active">Home</a></li>
-                                <li class="menu-item"><a href="./anime-listing.html" >Listing</a></li>
+                                <li class="menu-item"><a href="{{url('/listing')}}" >Listing</a></li>
                                 <li class="has-children">
                                     <a href="javascript:void(0);">Detail</a>
                                     <ul class="submenu">
-                                        <li><a href="anime-detail.html">Anime Detail</a></li>
-                                        <li><a href="movie-detail.html">Movie Detail</a></li>
+                                        <li><a href="{{url('/anime-detail')}}">Anime Detail</a></li>
+                                        <li><a href="{{url('/movie-detail')}}">Movie Detail</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-children">

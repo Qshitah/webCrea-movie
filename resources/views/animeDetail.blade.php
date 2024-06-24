@@ -79,7 +79,7 @@
                 <div class="card st-2">
                     <div class="img-block mb-20">
                         <img src="/media/anime-card/img-22.png" alt="">
-                        <a href="./movie-detail.html" class="cus-btn light">
+                        <a href="{{url('/movie-detail')}}" class="cus-btn light">
                             Stream Now
                             <i class="far fa-play"></i>
                         </a>
@@ -98,7 +98,7 @@
                 <div class="card st-2">
                     <div class="img-block mb-20">
                         <img src="/media/anime-card/img-3.png" alt="">
-                        <a href="./movie-detail.html" class="cus-btn light">
+                        <a href="{{url('/movie-detail')}}" class="cus-btn light">
                             Stream Now
                             <i class="far fa-play"></i>
                         </a>
@@ -117,7 +117,7 @@
                 <div class="card st-2">
                     <div class="img-block mb-20">
                         <img src="/media/anime-card/img-8.png" alt="">
-                        <a href="./movie-detail.html" class="cus-btn light">
+                        <a href="{{url('/movie-detail')}}" class="cus-btn light">
                             Stream Now
                             <i class="far fa-play"></i>
                         </a>
@@ -136,7 +136,7 @@
                 <div class="card st-2">
                     <div class="img-block mb-20">
                         <img src="/media/anime-card/img-9.png" alt="">
-                        <a href="./movie-detail.html" class="cus-btn light">
+                        <a href="{{url('/movie-detail')}}" class="cus-btn light">
                             Stream Now
                             <i class="far fa-play"></i>
                         </a>
@@ -155,7 +155,7 @@
                 <div class="card st-2">
                     <div class="img-block mb-20">
                         <img src="/media/anime-card/img-19.png" alt="">
-                        <a href="./movie-detail.html" class="cus-btn light">
+                        <a href="{{url('/movie-detail')}}" class="cus-btn light">
                             Stream Now
                             <i class="far fa-play"></i>
                         </a>
@@ -181,7 +181,7 @@
         <div class="container-fluid">
             <div class="heading mb-32">
                 <h2 class="h-40 bold">Continue Watching</h2>
-                <a href="./anime-listing.html" class="light-btn primary">View All <i class="far fa-chevron-right"></i></a>
+                <a href="{{url('/listing')}}" class="light-btn primary">View All <i class="far fa-chevron-right"></i></a>
             </div>
             <div class="row">
                 <div class="col-xxl-4 col-lg-6">
@@ -208,7 +208,7 @@
                                 </li>
                             </ul>
                             <div class="btn-block">
-                                <a href="./movie-detail.html" class="cus-btn primary space">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                     <i class="far fa-play"></i>
                                     Play
                                 </a>
@@ -246,7 +246,7 @@
                                 </li>
                             </ul>
                             <div class="btn-block">
-                                <a href="./movie-detail.html" class="cus-btn primary space">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                     <i class="far fa-play"></i>
                                     Play
                                 </a>
@@ -284,7 +284,7 @@
                                 </li>
                             </ul>
                             <div class="btn-block">
-                                <a href="./movie-detail.html" class="cus-btn primary space">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                     <i class="far fa-play"></i>
                                     Play
                                 </a>
@@ -322,7 +322,7 @@
                                 </li>
                             </ul>
                             <div class="btn-block">
-                                <a href="./movie-detail.html" class="cus-btn primary space">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                     <i class="far fa-play"></i>
                                     Play
                                 </a>
@@ -360,7 +360,7 @@
                                 </li>
                             </ul>
                             <div class="btn-block">
-                                <a href="./movie-detail.html" class="cus-btn primary space">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                     <i class="far fa-play"></i>
                                     Play
                                 </a>
@@ -398,7 +398,7 @@
                                 </li>
                             </ul>
                             <div class="btn-block">
-                                <a href="./movie-detail.html" class="cus-btn primary space">
+                                <a href="{{url('/movie-detail')}}" class="cus-btn primary space">
                                     <i class="far fa-play"></i>
                                     Play
                                 </a>

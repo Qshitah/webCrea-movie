@@ -690,7 +690,7 @@
                                             </div>
                                             <div id="reply10" class="accordion-collapse collapse write-reply" data-bs-parent="#accordionExample">
                                                 <div class="write-comment-box">
-                                                    <form action="anime-detail.html">
+                                                    <form action="{{url('/anime-detail')}}">
                                                         <div class="input-group">
                                                             <input type="text" class="form-control p-0 border-0" name="search" required placeholder="Write your comment">
                                                             <button type="submit">Post</button>

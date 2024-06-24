@@ -48,12 +48,12 @@
                             <a href="{{url('/')}}" class="navbar-brand m-0 p-0"><img alt src="./assets/media/logo.png"></a>
                             <ul class="navbar-nav m-0">
                                 <li class="menu-item"><a href="./index.html">Home</a></li>
-                                <li class="menu-item"><a href="./anime-listing.html" >Listing</a></li>
+                                <li class="menu-item"><a href="{{url('/listing')}}" >Listing</a></li>
                                 <li class="has-children">
                                     <a href="javascript:void(0);" class="active">Detail</a>
                                     <ul class="submenu">
-                                        <li><a href="anime-detail.html">Anime Detail</a></li>
-                                        <li><a href="movie-detail.html" class="active">Movie Detail</a></li>
+                                        <li><a href="{{url('/anime-detail')}}">Anime Detail</a></li>
+                                        <li><a href="{{url('/movie-detail')}}" class="active">Movie Detail</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-children">
@@ -115,11 +115,11 @@
                     <nav class="mobile-navar d-xl-none">
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="anime-listing.html">Listing</a></li>
+                            <li><a href="{{url('/listing')}}">Listing</a></li>
                             <li class="has-children">Detail <span class="icon-arrow"></span>
                                 <ul class="children">
-                                    <li><a href="anime-detail.html">Anime Detail</a></li>
-                                    <li><a href="movie-detail.html" class="active">Movie Detail</a></li>
+                                    <li><a href="{{url('/anime-detail')}}">Anime Detail</a></li>
+                                    <li><a href="{{url('/movie-detail')}}" class="active">Movie Detail</a></li>
                                 </ul>
                             </li>
                             <li class="has-children" class="active">Pages <span class="icon-arrow"></span>

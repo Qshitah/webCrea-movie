@@ -1,0 +1,139 @@
+/*---------------------------------------------"
+// Template Name: Toy Store
+// Template URL: https://techpedia.co.uk/template/toy-store
+// Description:  Toy Store Html Template
+// Version: 1.0.0
+
+===============================================   
+STYLE SHEET INDEXING
+|
+|___ Fonts
+|___ Variables
+|___ Responsive
+|___ Reset Styles
+|___ Spacing
+|___ Helper Classes
+|___ Buttons
+|___ Headings
+|___ Layout Styles
+|___ END STYLE SHEET INDEXING
+
+--------------------------------------------*/
+
+/*-------------------------
+    Fonts
+-------------------------*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+/*-------------------------
+    Variables
+-------------------------*/
+/* Fonts */
+$font-primary: 'Jost', sans-serif;
+$font-sec: 'Open Sans', sans-serif;
+$font-sec-2: 'Inter', sans-serif;
+$font-awesome: "Font Awesome 5 Pro";
+
+/* Colors */
+$accent-1: #58DDA3;
+$white: #F8F8FF;
+$black: #212020;
+$lightest-black: #212121;
+$light-black: #1B1B1B;
+$dark-black: #0D0D0D;
+
+$light-gray: #C6CBD2;
+$medium-gray: #9EA2A8;
+$lightest-gray: #35373A;
+$dark-gray: #7A7F85;
+
+
+
+/* Transitions */
+$transition: all .5s ease-in-out;
+
+/* Gradients */
+    $gradient: linear-gradient(0deg, #BFF9FF 0%, #BFF9FF 100%), #FAFAFA;
+    $gradient-sec: linear-gradient(0deg, #FEEEC1 0%, #FEEEC1 100%), #FAFAFA;
+
+/* Shadows */
+
+$shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+$light-shadow: 0px 0px 30px 5px rgba(88, 221, 163, 0.80);
+$dark-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+$text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15), 0px 4px 10px rgba(0, 0, 0, 0.15), 0px 17px 17px rgba(0, 0, 0, 0.13), 0px 39px 24px rgba(0, 0, 0, 0.08), 0px 70px 28px rgba(0, 0, 0, 0.02), 0px 109px 31px rgba(0, 0, 0, 0.00);
+
+.img{
+    background: url(../media/backgrounds/bg-2.png)
+}
+
+/*-------------------------
+    Responcive Styles
+-------------------------*/
+@import "helpers/mixin";
+
+/*-------------------------
+    Reset Styles
+-------------------------*/
+@import "basic/basic";
+
+/*-------------------------
+Helpers
+-------------------------*/
+@import "helpers/classes";
+
+
+@import "helpers/spacing";
+
+/*-------------------------
+Elements
+-------------------------*/
+@import "elements/preloader";
+
+@import "elements/countdown";
+
+@import "elements/buttons";
+
+@import "elements/form";
+
+@import "elements/heading";
+
+@import "elements/modal";
+
+@import "elements/filters";
+
+/*-------------------------
+  layouts
+-------------------------*/
+@import "layout/header";
+
+ @import "layout/footer";
+
+@import "layout/hero-banner";
+
+@import "layout/inner-banner";
+
+@import "layout/categories";
+
+@import "layout/trending";
+
+@import "layout/continue";
+
+@import "layout/comming-soon";
+
+@import "layout/trailer";
+
+@import "layout/detail";
+
+@import "layout/comment";
+
+@import "layout/listing";
+
+@import "layout/blog";
+
+@import "layout/signup";
+
+@import "layout/login";
+
+

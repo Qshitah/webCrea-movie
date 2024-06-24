@@ -1,0 +1,176 @@
+.trailer{
+    .anime-card{
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        img{
+            border-radius: 20px;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        
+        .name{
+            position: absolute;
+            left: -500px;
+            bottom: 40px;
+            z-index: 100;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: $transition;
+            .tag {
+                display: flex;
+                align-items: center;
+
+                li {
+                    color: $medium-gray;
+                    font-family: $font-sec;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 120%;
+                    padding-left: 8px;
+                    margin-left: 8px;
+                    border-left: 1px solid #43464B;
+
+                    &.icon {
+                        padding: 0 4px 0 12px;
+
+                        i {
+
+                            color: #EEAA0F;
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        margin: 0;
+                        border: none;
+                    }
+
+                    &:nth-child(1) {
+                        margin: 0;
+                        padding-left: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .btn-block{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            position: absolute;
+            left: 0;
+            top: -500px;
+            transition: $transition;
+            .time{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                span{
+                    color: #FFF;
+                    font-family: $font-sec;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 150%; /* 24px */
+                }
+            }
+        }
+        &:hover{
+            .name{
+                left: 40px;
+            }
+
+            .btn-block{
+                top: 0px;
+                z-index: 500;
+            }
+        }
+        &.mb-30{
+            @include media-query(1440px) {
+                margin-bottom: 22px;
+            }
+            @include media-query(768px) {
+                margin-bottom: 20px;
+            }
+        }
+        &.mb-none{
+            @include media-query(1199px) {
+                margin-bottom: 0;
+            }
+            @include media-query(768px) {
+                margin-bottom: 20px;
+            }
+        }
+        &.st-2{
+            &::before{
+                content: '';
+                width: 100%;
+                height: 102%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                // transition: $transition;
+            }
+            .name{
+                position: absolute;
+                bottom: unset;
+                top: 38px;
+                @include media-query(490px) {
+                    top: 20px;
+                }
+
+                
+                .tag {
+                    li{
+                        color: $white;
+                        border-color: $white;
+                    }
+                }
+            }
+            .btn-block{
+                width: auto;
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                flex-direction: row;
+                gap: 15px;
+                left: 30px;
+                top: unset;
+                bottom: -100px;
+                transition: $transition;
+                @include media-query(490px) {
+                    left: 24px;
+                }
+            }
+            &:hover{
+                &::before{
+                    fill: rgba(78, 52, 52, 0.30);
+                    backdrop-filter: blur(15px);
+                }
+                .name{
+                    left: 43px;
+                    @include media-query(490px) {
+                        left: 24px;
+                    }
+
+                }
+                .btn-block{
+                    bottom: 31px;
+                    @include media-query(490px) {
+                        bottom: 20px;
+                    }
+                }
+
+            }
+            
+
+        }
+    }
+}

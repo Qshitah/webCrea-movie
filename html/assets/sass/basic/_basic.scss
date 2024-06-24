@@ -1,0 +1,265 @@
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  
+}
+
+ul.list-style,
+ol.list-style {
+  padding: 0;
+}
+
+ul.list-style li::marker,
+ol.list-style li::marker {
+  color: $accent-1;
+}
+
+.unstyled {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+// .container,
+// .container-fluid,
+// .container-lg,
+// .container-md,
+// .container-sm,
+// .container-xl,
+// .container-xxl {
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
+.container,
+.container-fluid{
+  @media (min-width: 1440px) {
+    padding: 0 75px;
+    width: 100%;
+  }
+}
+// .container{
+//   @media only screen and (min-width: 1400px) and (max-width: 1920px){
+//     max-width: 100%;
+//     padding-left: 75px;
+//     padding-right: 75px;
+//   }
+// }
+
+// @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+//   .container {
+//     max-width: 100%;
+//     padding-left: 30px;
+//     padding-right: 30px;
+//   }
+// }
+// @media only screen and (min-width: 575px) and (max-width: 1199px) {
+//   .container {
+//     max-width: 100%;
+//     padding-left: 30px;
+//     padding-right: 30px;
+//   }
+// }
+
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row>[class*="col"] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row.g-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.g-0>[class*="col"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-content{
+  // margin: 20px 0;
+}
+
+
+.star-cb-group {
+  font-size: 0;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  margin-bottom: 24px;
+}
+
+
+/*-------------------------
+    Typography
+-------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  color: $white;
+  background-color: $light-black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  height: 100%;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+p,
+pre,
+blockquote,
+table,
+hr {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: inherit;
+  }
+}
+
+p {
+  font-family: $font-sec;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  &.lh-120{
+    line-height: 120%;
+  }
+  br{
+    @media(max-width: 490px) {
+      display: none;
+    }
+
+  }
+  &.sec{
+    font-size: 16px;
+    @media(max-width: 992px) {
+      font-size: 15px;
+    }
+    @media(max-width: 490px) {
+      font-size: 14px;
+    }
+  }
+  &.sm{
+    font-weight: 400;
+  }
+
+  @media(max-width: 992px) {
+    font-size: 15px;
+  }
+  @media(max-width: 490px) {
+    font-size: 14px;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: unset;
+  &:hover {
+    color: $accent-1;
+    transition: $transition;
+  }
+}
+span {
+  display: inline-block;
+}
+b,
+strong {
+  font-family: $font-primary;
+}
+
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 12px;
+  gap: 8px;
+  margin: 0;
+  li{
+    a{
+      width: 45px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-size: 16px;
+      font-family: $font-sec-2;      
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      border-radius: 8px;
+      letter-spacing: 0.32px;
+      background: $black;
+      @include media-query(490px) {
+        width: 38px;
+        height: 37px;
+        border-radius: 6px;
+      }
+
+      
+      i{
+        font-size: 16px;
+        font-weight: 400;
+        
+      }
+      &.active{
+        background: $accent-1;
+        color: $black;
+      }
+      &:hover{
+        color: $black;
+        background: $accent-1;
+      }
+
+    }
+  }
+}
+
+.social-icons{
+  display: flex;
+  gap: 32px;
+  @media(max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+  }
+  li{
+      a{
+        font-size: 32px;
+        color: $white;
+        transition: $transition;
+        &:hover{
+          color: $accent-1;
+          svg{
+            stroke: $accent-1;
+            stroke-width: $accent-1;
+          }
+        }
+      }
+  }
+}

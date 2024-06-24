@@ -1,0 +1,41 @@
+.categories{
+    .categorie-item{
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        border-radius: 20px;
+        border: 1px solid $lightest-gray;
+        transition: $transition;
+        @include short-query(1400px, 1680px) {
+            gap: 12px;
+            padding: 12px;
+        }
+        @include media-query(767px) {
+            gap: 12px;
+            padding: 12px;
+        }
+
+        img{
+            @include short-query(1400px, 1499px) {
+                width: 40%;
+            }
+
+        }
+        .content{
+            h2{
+                @include short-query(1600px, 1680px) {
+
+                    font-size: 32px;
+                }
+                @include short-query(1400px, 1599px) {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &:hover{
+            box-shadow: $light-shadow;
+        }
+    }
+}

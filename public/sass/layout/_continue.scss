@@ -1,0 +1,85 @@
+.continue{
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include short-query(1399px, 1900px) {
+            flex-direction: column;
+            align-items: inherit;
+        }
+        @include short-query(992px, 1199px) {
+            flex-direction: column;
+            align-items: inherit;
+        }
+        @include media-query(580px) {
+            flex-direction: column;
+            align-items: inherit;
+        }
+
+        img{
+            border-radius: 12px;
+            // @include short-query(1440px, 1900px) {
+            //     width: 40%;
+            // }
+        }
+        .content{
+            .tag{
+                display: flex;
+                margin-bottom: 40px;
+                @include short-query(1399px, 1900px) {
+                    margin-bottom: 14px;
+                }
+                @include media-query(580px) {
+                    margin-bottom: 14px;
+                }
+
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    position: relative;
+                    padding-left: 20px;
+                    &::before{
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 4px;
+                        background: $medium-gray;
+                        position: absolute;
+                        left: 8px;
+                        top: calc( 50% - 2px);
+                        line-height: 10px;
+                    }
+                    &:nth-child(1){
+                        padding: 0 4px;
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                    
+                }
+            }
+            .btn-block{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                // a{
+                //     @include short-query(1440px, 1900px) {
+                //         padding: 10px 20px;
+                //         font-size: 18px;
+                //         border-radius: 6px;
+                //     }
+                // }
+                .h-20 {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}

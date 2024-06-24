@@ -1,0 +1,90 @@
+.movie-detail{
+    .name-rating{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        @media(max-width: 575px) {
+            align-items: flex-start;
+        }
+        .rating{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            span{
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                line-height: 150%;
+                font-family: $font-sec;
+            }
+        }
+    }
+    h5{
+        &.h-24{
+            line-height: 120%;
+        }
+    }
+    .tag{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        li{
+            padding: 4px 8px;
+            border-radius: 8px;
+            border: 1px solid #FFF;
+            color: #FFF;
+            text-align: center;
+            font-family: $font-sec;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 150%; 
+        }
+    }
+    .about{
+        .categorie{
+            padding: 16px 0;
+            border: 1px solid $black;
+            border-left: none;
+            border-right: none;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            .categorie-list{
+                display: flex;
+                // width: 367px;
+                align-items: center;
+                align-content: center;
+                gap: 12px 16px;
+                flex-wrap: wrap;
+                @media(max-width: 1199px) {
+                    gap: 8px 6px;
+                }
+                li{
+                    a{
+                        color: $white;
+                        text-align: center;
+                        font-family: $font-sec;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 130%; /* 18.2px */
+                        padding: 6px 20px;
+                        border-radius: 20px;
+                        border: 1px solid $lightest-gray;
+                        background: $light-black;
+
+                        &:hover{
+                            color: $accent-1;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .line{
+        width: 100%;
+        margin-top: 50px;
+        height: 1px;
+        background: $lightest-gray;
+    }
+}
